@@ -1,0 +1,27 @@
+diff --git a/dist/compiler/compileBrowser.js b/dist/compiler/compileBrowser.js
+index 97d71b6ecc8b641e9408301eedf372e5e2e62e1d..dca4f034cd67bdca72d04476f8e2ae64af2bb724 100644
+--- a/dist/compiler/compileBrowser.js
++++ b/dist/compiler/compileBrowser.js
+@@ -76,7 +76,7 @@ const getExternals = remixConfig => {
+   if (fakeBuiltins.length > 0) {
+     throw new Error(`It appears you're using a module that is built in to node, but you installed it as a dependency which could cause problems. Please remove ${fakeBuiltins.join(", ")} before continuing.`);
+   }
+-  return module$1.builtinModules.filter(mod => !dependencies$1.includes(mod));
++  return module$1.builtinModules.filter(mod => !dependencies$1.includes(mod)).concat('npm:*');
+ };
+ const writeAssetsManifest = async (config, assetsManifest) => {
+   let filename = `manifest-${assetsManifest.version.toUpperCase()}.js`;
+diff --git a/dist/compiler/compilerServer.js b/dist/compiler/compilerServer.js
+index e478a879768cd6d54b9f42676715db034996f4bc..26d61e0b28831d557b48542cf15231fad9a2febb 100644
+--- a/dist/compiler/compilerServer.js
++++ b/dist/compiler/compilerServer.js
+@@ -128,7 +128,8 @@ const createEsbuildConfig = (config, assetsManifestChannel, options) => {
+     },
+     jsx: "automatic",
+     jsxDev: options.mode !== "production",
+-    plugins
++    plugins,
++    external: ['npm:*', 'node:*']
+   };
+ };
+ async function writeServerBuildResult(config, outputFiles) {
