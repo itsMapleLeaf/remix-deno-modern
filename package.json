@@ -1,11 +1,7 @@
 {
   "type": "module",
   "dependencies": {
-    "@remix-run/deno": "^1.15.0",
-    "@remix-run/react": "^1.15.0",
-    "isbot": "^3.6.10",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@remix-run/deno": "^1.15.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.15.0"
