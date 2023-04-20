@@ -6,10 +6,10 @@
   },
   "tasks": {
     "build": "pnpm remix build",
-    "start": "deno run --allow-env --allow-net --allow-read=public/ build/index.js",
+    "start": "deno run --allow-env --allow-net --allow-read=public/ --node-modules-dir=false build/index.js",
     "dev": "deno task dev:remix & deno task dev:server",
     "dev:remix": "NODE_ENV=development pnpm remix watch",
-    "dev:server": "NODE_ENV=development deno run --watch --allow-env --allow-net --allow-read=public/ build/index.js"
+    "dev:server": "NODE_ENV=development deno run --watch --no-clear-screen --allow-env --allow-net --allow-read=public/ --node-modules-dir=false build/index.js"
   },
   "lint": {
     "files": {
