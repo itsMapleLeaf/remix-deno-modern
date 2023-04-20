@@ -101,7 +101,7 @@ GitHub secret.
    [`deployctl`](https://github.com/denoland/deployctl):
 
 ```sh
-deno install --allow-read --allow-write --allow-env --allow-net --allow-run --no-check -r -f https://deno.land/x/deploy/deployctl.ts
+deno install -A --no-check -r -f https://deno.land/x/deploy/deployctl.ts
 ```
 
 6. If you have previously installed the Deno Deploy CLI, you should update it to
