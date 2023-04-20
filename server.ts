@@ -9,6 +9,6 @@ const remixHandler = createRequestHandlerWithStaticFiles({
   getLoadContext: () => ({}),
 })
 
-const port = Number(Deno.env.get("PORT")) || 8000
+const port = Number(Deno.env.get("PORT")) || 3000
 console.log(`🦕 Listening on http://localhost:${port}`)
 serve(remixHandler, { port })
