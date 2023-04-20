@@ -8,8 +8,8 @@
     "build": "pnpm remix build",
     "start": "deno run --allow-env --allow-net --allow-read=public/ build/index.js",
     "dev": "deno task dev:remix & deno task dev:server",
-    "dev:remix": "pnpm remix watch",
-    "dev:server": "deno run --watch --allow-env --allow-net --allow-read=public/ build/index.js"
+    "dev:remix": "NODE_ENV=development pnpm remix watch",
+    "dev:server": "NODE_ENV=development deno run --watch --allow-env --allow-net --allow-read=public/ build/index.js"
   },
   "lint": {
     "files": {
