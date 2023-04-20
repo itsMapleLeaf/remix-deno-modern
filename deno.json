@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "dom.asynciterable", "deno.ns"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "npm:react"
+  },
+  "tasks": {
+    "build": "pnpm remix build",
+    "start": "deno run --allow-env --allow-net --allow-read=public/ build/index.js",
+    "dev": "deno task dev:remix & deno task dev:server",
+    "dev:remix": "pnpm remix watch",
+    "dev:server": "deno run --watch --allow-env --allow-net --allow-read=public/ build/index.js"
+  },
+  "lint": {
+    "files": {
+      "exclude": ["node_modules", "public", "build"]
+    }
+  }
+}
