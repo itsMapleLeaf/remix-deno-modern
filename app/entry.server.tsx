@@ -4,10 +4,10 @@
  * For more information, see https://remix.run/docs/en/main/file-conventions/entry.server
  */
 
-import type { EntryContext } from "npm:@remix-run/deno"
-import { RemixServer } from "npm:@remix-run/react"
-import isbot from "npm:isbot"
-import { renderToReadableStream } from "npm:react-dom/server"
+import type { EntryContext } from "@remix-run/deno"
+import { RemixServer } from "@remix-run/react"
+import isbot from "isbot"
+import { renderToReadableStream } from "react-dom/server"
 
 export default async function handleRequest(
   request: Request,

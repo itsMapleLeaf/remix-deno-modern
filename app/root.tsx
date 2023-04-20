@@ -5,7 +5,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "npm:@remix-run/react"
+} from "@remix-run/react"
 
 export default function App() {
   return (
