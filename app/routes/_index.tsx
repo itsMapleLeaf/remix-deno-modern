@@ -1,16 +1,19 @@
 import type { V2_MetaFunction } from "@remix-run/react"
 
 export const meta: V2_MetaFunction = () => {
-  return [{ title: "New Remix App" }]
+  return [{ title: "New Remix App 🦕" }]
 }
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Welcome to Remix 🦕</h1>
-      <ul>
+    <main className="p-16">
+      <h1 className="text-5xl font-light mb-4">
+        Welcome to Remix <span aria-hidden>🦕</span>
+      </h1>
+      <ul className="flex flex-col list-inside list-disc pl-4">
         <li>
           <a
+            className="underline transition hover:text-green-400"
             target="_blank"
             href="https://remix.run/tutorials/blog"
             rel="noreferrer"
@@ -20,6 +23,7 @@ export default function Index() {
         </li>
         <li>
           <a
+            className="underline transition hover:text-green-400"
             target="_blank"
             href="https://remix.run/tutorials/jokes"
             rel="noreferrer"
@@ -28,11 +32,16 @@ export default function Index() {
           </a>
         </li>
         <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
+          <a
+            className="underline transition hover:text-green-400"
+            target="_blank"
+            href="https://remix.run/docs"
+            rel="noreferrer"
+          >
             Remix Docs
           </a>
         </li>
       </ul>
-    </div>
+    </main>
   )
 }
